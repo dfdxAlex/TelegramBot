@@ -3,6 +3,20 @@ import requests
 # Библиотека для работы с json
 import json
 
+# создать виртуальное окружение
+# python -m venv myenv
+# активировать
+# myenv/Scripts/activate
+# установить в окружение
+# pip install python-telegram-bot
+# deactivate
+
+
+# библиотеки для игровой части
+from telegram import InlineQueryResultArticle, InputTextMessageContent
+from telegram.ext import Updater, InlineQueryHandler, CommandHandler
+import logging
+
 # Токен, идентификатор бота, по нему api определяет с 
 # каким ботом работать amator4DedBot
 TOKEN = '6754939943:AAFvmhs3KjuEbz37_BOgbxHWp5kL15x4WBQ'
@@ -59,7 +73,7 @@ def main():
                         result = '<a href="http://127.0.0.1:81/redaktor/CV/public/cv.php">CV креатор</a>'
                     else:
                         result = '<b>Привет</b>'
-                        
+
                     send_message(chat_id, result)
                     offset = update['update_id'] + 1
 
