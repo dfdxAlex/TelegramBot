@@ -1,21 +1,19 @@
 # Библиотека для работы с запросами HTTP
 import requests
 # Библиотека для работы с json
-import json
+# import json
 
-# создать виртуальное окружение
-# python -m venv myenv
-# активировать
-# myenv/Scripts/activate
-# установить в окружение
-# pip install python-telegram-bot
-# deactivate
+# Для теста aiogram
+import asyncio
+import logging
+from aiogram import Bot, Dispatcher, types
+from aiogram.filters.command import Command
+
 
 
 # библиотеки для игровой части
-from telegram import InlineQueryResultArticle, InputTextMessageContent
-from telegram.ext import Updater, InlineQueryHandler, CommandHandler
-import logging
+# from telegram import InlineQueryResultArticle, InputTextMessageContent
+# from telegram.ext import Updater, InlineQueryHandler, CommandHandler
 
 # Токен, идентификатор бота, по нему api определяет с 
 # каким ботом работать amator4DedBot
@@ -82,3 +80,16 @@ if __name__ == '__main__':
     main()
 
 
+# создать виртуальное окружение
+# python -m venv myenv
+# активировать
+# myenv/Scripts/activate
+# установить в окружение
+# pip install python-telegram-bot
+# deactivate
+
+# Установить библиотеку Requests
+# pip install requests
+
+# Установка библиотеки aiogram
+# pip install -U aiogram
