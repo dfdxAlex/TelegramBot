@@ -69,8 +69,12 @@ def main():
                         result = '<a href="http://127.0.0.1:81/redaktor/dfdx/dfdx.php">Сайт DFDX</a>'
                     elif 'cv' in message_text.lower():
                         result = '<a href="http://127.0.0.1:81/redaktor/CV/public/cv.php">CV креатор</a>'
+                    elif 'chcę kupić lamp' in message_text.lower() or 'chce kupic lampe' in message_text.lower() or 'kupic lampe' in message_text.lower():
+                        result = 'Swietny pomysł, mogę spróbować doradzić Ci w tej kwestii'
+                    elif 'dzień dobry' in message_text.lower() or 'dzien dobry' in message_text.lower():
+                        result = 'Dzień dobry. Czy mogę ci w czymś pomóc?'
                     else:
-                        result = '<b>Привет</b>'
+                        result = '<b>Dzień dobry, jestem chat botem sklepu, cudny lampy. Mogę spróbować ci pomóc. Proszę zadać pytanie.</b>'
 
                     send_message(chat_id, result)
                     offset = update['update_id'] + 1
